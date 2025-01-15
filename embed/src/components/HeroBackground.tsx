@@ -157,7 +157,7 @@ const TerrainBackground = () => {
         speed: { value: 0.1 },
         valley_elevation: { value: 2.0 },
         noise_elevation: { value: 1.5 },
-        line_color: { value: new THREE.Vector3(0.0, 0.694, 0.204) }
+        line_color: { value: new THREE.Vector3(1.0,1.0,1.0) }
       },
       vertexShader,
       fragmentShader,
