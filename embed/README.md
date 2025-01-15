@@ -1,36 +1,83 @@
+
+# Zuffer - Custom Discord Bot Builder
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Description
+
+Zuffer is a custom Discord bot builder that allows you to create a personalized event management bot. With Zuffer, you can send custom template-based welcome messages, create channels, send embeds, and manage slash commands effortlessly.
+
+## Installation Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 14.x or later)
+- [npm](https://www.npmjs.com/) (version 6.x or later)
+- [Git](https://git-scm.com/)
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repository:
+
+```bash
+git clone https://www.github.com/muzaffarmhd/zuffer/
+```
+
+Navigate to the project directory:
+
+```bash
+cd embed/
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- **Welcomer**: Send custom template-based welcome messages to new members.
+- **Embed Sender**: Create and send rich embeds to your Discord channels.
+- **Channel Creator**: Easily create new channels within your Discord server.
+- **Slash Commands**: Manage and execute custom slash commands.
 
-To learn more about Next.js, take a look at the following resources:
+## Usage Examples
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Sending a Welcome Message
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To send a welcome message, configure the `Welcomer` component in your bot settings. Customize the message template to suit your needs.
 
-## Deploy on Vercel
+### Creating a Channel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Use the `Channel Creator` feature to create new channels. Specify the channel name and type, and the bot will handle the rest.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Sending an Embed
+
+Utilize the `Embed Sender` to create rich embeds. Customize the embed content, color, and other properties before sending it to a channel.
+
+### Managing Slash Commands
+
+Configure and manage slash commands through the `Slash Commands` feature. Define custom commands and their respective actions.
+
+
+## Contribution Guidelines
+
+Zuffer is licensed under the GPL-3.0 License. If you use this code, you must make your code public as well. We welcome all contributions to improve Zuffer. To contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit them (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
+
+Thank you for your contributions!

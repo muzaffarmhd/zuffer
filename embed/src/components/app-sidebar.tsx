@@ -45,7 +45,7 @@ const items = [
   },
   {
     title: "Edit",
-    url: "/configure/update",
+    url: "/configure/edit",
     icon: Pencil,
   },
 ]

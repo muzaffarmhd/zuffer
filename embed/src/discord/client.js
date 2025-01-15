@@ -1,3 +1,4 @@
+"use server";
 import { Client, Events, GatewayIntentBits } from 'discord.js';
 import fs from 'fs';
 
@@ -9,6 +10,39 @@ const intents = [
 ];
 
 const client = new Client({ intents });
+
+export async function saveBotData (formData) {
+    try {
+        const token = formData.get('token')?.toString().trim();
+        fs.writeFileSync('.env.local', `DISCORD_TOKEN="${token}"\n`);
+        await client.login(token);
+        const displayName = client.user.tag;
+        const avatarURL = client.user.displayAvatarURL({
+            format: 'webp',
+            dynamic: true,
+            size: 1024
+        });
+        await client.application?.fetch();
+        const description = client.application?.description || 'No description provided!';
+        fs.writeFileSync('src/data/bot_data.json', JSON.stringify({ displayName, avatarURL, description }));
+        console.log('Saved bot data to .env.local, bot_data.json');
+    } catch (error) {
+        console.error('Failed to save bot data:', error);
+        throw error;
+    } finally {
+        return true;
+    }
+}
+
+export async function checkIfSaved() {
+    const token = process.env.DISCORD_TOKEN?.trim();
+    return !!token; // Return true if token exists, false otherwise
+}
+
+export async function getBotData() {
+    const data = fs.readFileSync('src/data/bot_data.json');
+    return JSON.parse(data);
+}
 
 export async function BotLogin(providedToken) {
     const token = providedToken || process.env.DISCORD_TOKEN?.trim();
