@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 Zuffer is a custom Discord bot builder that allows you to create a personalized event management bot. With Zuffer, you can send custom template-based welcome messages, create channels, send embeds, and manage slash commands effortlessly.
 ## Console Preview
-![alt text](image-1.png)
+![alt text](assets/image-1.png)
 ## Installation Prerequisites
 
 Before you begin, ensure you have the following installed:
